@@ -8,7 +8,8 @@ pipeline {
     stages {
         stage('Build') { 
             steps {
-                sh 'npm install' 
+                sh 'lerna bootstrap'
+                sh 'lerna run --parallel --stream start'
             }
         }
     }
