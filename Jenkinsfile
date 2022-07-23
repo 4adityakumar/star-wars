@@ -13,10 +13,10 @@ pipeline {
                 // sh 'lerna run --parallel --stream start'
             }
         }
-    }
-    stage('Test') {
+         stage('Test') {
             steps {
                 sh './jenkins/scripts/test.sh'
             }
         }
+    }
 }
